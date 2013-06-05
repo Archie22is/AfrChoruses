@@ -1,0 +1,313 @@
+\setupoutput[pdftex]
+\setupbodyfont[10.5pt]
+\setuppapersize[A5][A5]
+\setuplayout[topspace=1.35cm,
+             header=0.9cm,
+             footer=1.1cm,
+             dx=1.45mm]
+\language[en]
+\setupheads
+  [alternative=inmargin]
+\setupinterlinespace[line=1.3\bodyfontsize]
+\setupwhitespace[medium]
+% \setuphead[chapter][letter={\switchtobodyfont[14pt,ss]\bf},
+%   numberstyle=bold,
+%  page=no,
+%   before={\blank[1*big]\setupheader[state=low]},
+%   after={\blank[1*big]\setupheader[state=high]}]
+\setuphead[chapter][style=\tfa \bf,
+  numberstyle=bold,
+ page=no,
+  before={\blank[1*big]},
+  after={\blank[1*medium]}]
+%\setuphead[section][letter={\switchtobodyfont[12pt,ss]\bf}]
+\setuplines[before={\startnarrower[1*left] \it},
+            after={\stopnarrower}]
+
+\starttext
+
+\startstandardmakeup
+\blank[2*big]
+\setupframed[offset=.5em,frame=off]
+\tbox{\framed[width=\hsize,align=left,rightframe=on]{
+
+\blank[medium]
+{\switchtobodyfont[12pt,ss] \bfd \hfill A South-African Chorus
+\blank[big]
+Book}}} 
+\blank[3*big]
+\setupframed[offset=.5em,frame=off]
+\tbox{\framed[width=\hsize,align=left]{
+{\ss \tfb \hfill St Michael's Church,}}}
+\tbox{\framed[width=\hsize,align=left]{
+{\ss \tfb \hfill Bryanston.}
+}}\vfill
+
+
+\stopstandardmakeup
+
+\startfrontmatter
+\setuppagenumbering[location={footer,margin},
+ conversion=romannumerals,left={\hfil},right={\hfil},
+ alternative=doublesided]
+\setuppagenumber[number=1]
+\setupheader[state=low]
+
+ %    _________________________________________________________________
+
+\framed
+   [frame=off, width=broad, height=\textheight, bottom=, top=\vss]
+ {\rbox {
+\switchtobodyfont[small]
+\blank[19*big]
+
+\starttabulate[|1|p|]
+\NC          Title  \NC: African Chorus Book \NC \NR
+\NC     Creator(s)  \NC: Various Sources \NC \NR
+\NC         Rights  \NC: ???Public Domain??? \NC \NR
+\NC      Publisher  \NC: St Michaels Church \NC \NR
+\NC                 \NC~ http://www.stmichaelschurch.co.za \NC \NR
+\NC                 \NC~  info@stmichaelschurch.co.za \NC \NR
+\NC Date publication\NC: 2011-08-13\NC \NR
+\NC         Editors \NC: Chris Mamabolo\NC \NR
+\NC         Layout  \NC: Jan de Kruyf\NC \NR
+\stoptabulate
+
+   African Religious Music.
+\blank[2*big]
+Quote in the dedication on page iii: C.K.~Chesterton.
+
+}}
+  %   _________________________________________________________________
+
+
+\page[left]
+\startlines
+To father Jimmy McConnell, of St Michael's, 
+whose truth was stranger than fiction,
+with a gratitude greater than the world.
+\stoplines
+\page[right]
+\completecontent
+
+\stopfrontmatter
+
+\startbodymatter
+\setuplines[before={},
+            after={}]
+\setuppagenumbering[location={footer,margin},
+  conversion=numbers,left={\hfil},right={\hfil},
+  alternative=doublesided]
+\defineparagraphs[tocol][n=2]
+\setupparagraphs[tocol][1][width=7cm]
+\setupparagraphs[tocol][2][style=smallslanted]
+\page[right]
+\setuppagenumber[number=1]
+
+
+% % \component chap33
+% \component chap1 % Tsotlhe! Tsotlhe!
+% \vfill
+% \component chap2 % Ayabizw' Amagama
+% \vfill
+% \component chap3 % Tshollela Moya Wa Hao, Jesu!
+% \page
+% \component chap4 % Jehova Thel' Umoya
+% \vfill
+% \component chap5 % Ithemba Lami
+% \vfill
+% \component chap6 % Singa Bahambayo Thina
+% \page
+% \component chap7 % Koloi Ya Elijah
+% \vfill
+% \component chap8 % Besuka, Bemlandela
+% \vfill
+% \page
+% \component chap9 % Ngcwele, Ngcwele
+% \vfill
+% \component chap10 % Morena Re Hauhele
+% \vfill
+% \component chap13 % Tumelo Ke Thebe
+% \page
+% \component chap11 % Alpha Le Omega
+% \vfill
+% \component chap12 % Ngisondela Kuwe Ngithandaza
+% \vfill
+% \component chap14 % Ke Beya, Bophelo Ba Ka
+% \page
+% \component chap15 % I Will Sing Unto My Lord
+% \vfill
+% \component chap20 % I Will Lift Up Your Name High
+% \page
+% \component chap16 % Thixo Ndila Namhla
+% \vfill
+% \component chap21 % Akahlulwa Lutho, uJesu
+% \vfill
+% \page
+% \component chap18 % Jabulani Africa
+% \vfill
+% \component chap19 % eGalilee
+% \page
+% \component chap17 % Hamba Kahle
+% \vfill
+% \component chap27 % Kanye Nawe Nkosi Yam'
+% \vfill
+% \component chap22 % Kuyoba Mnandi
+% \vfill
+% \component chap24 % Limnadi Livangeli
+% \page
+% \component chap23 % Siyahamba
+% \vfill
+% \component chap25 % Suka Endleleni
+% \page
+% \component chap26 % Sinje Ngamajuba
+% \vfill
+% \component chap28 % Mvana Ka Thixo
+% \vfill
+% \component chap29 % Khuluma
+% \page
+% \component chap30 % Lebitso / Igama
+% \vfill
+% \component chap31 % Shalom!
+% \vfill
+% \component chap34 % Ha Hona Ya Tshoanang Le Jeso
+% \page
+% \component chap33 % Hlonolofatsa
+% \vfill
+% \component chap32 % eJoredane
+% \vfill
+% \page
+% \component chap35 % Ewe Linamandla!
+% \vfill
+% \component chap36 % Nkosi, Nkosi Usithethelele
+% \vfill
+% \component chap38 % Africa Will Be Saved
+% \page
+% \component chap37 % Ungcwele Ungcwele
+% \vfill
+% \component chap39 % Wena Modimo, Oo Boitshepo
+% \vfill
+% \component chap41 % Nkosi Sihawukele
+% \page
+% \component chap40 % uJesu lo Unobubele Ngami
+% \vfill
+% \component chap43 % Thato Ya Hao
+% \page
+% \component chap42 % We, Bathandwa
+% \vfill
+% \component chap44 % Thuma Mina
+% \vfill
+% \page
+% \component chap46 % Tana Moya
+% \vfill
+% \page
+% \component chap47 % Se teng sediba sa madi
+% \vfill
+% \component chap45 % Ntate, Roma Nna
+% \vfill
+% \page
+% \component chap48 % Alpha and Omega
+% \vfill
+% \component chap49 % Africa Will Be Saved!
+% \page
+% \component chap50 % Modimo rea ho boka!
+% \vfill
+% \component chap51 % Matla ke’a hao
+% \vfill
+% \page
+% \component chap52 % Ngi sondela kuwe
+% \vfill
+% \page
+% \component chap53 % it is well with my soul.
+% \vfill
+% \page
+% \component chap54 % Ha le mpotsa tshepo ya ka
+% \vfill
+% \page
+% \component chap55 % Mmele, pelo, le moya
+% \vfill
+% \component chap56 % Modimo wa boikanyô
+% \page
+% \component chap57 % Hamba kahle
+% \vfill
+% \page
+% \component chap58 % Ngathi ngisahamba emhlabeni
+% \vfill
+% \page
+% \component chap59 % We, bathandwa!
+% \vfill
+% \page
+% \component chap60 % Seteng sediba sa madi
+% \vfill
+% \page
+% \component chap61 % Ruri le nkhapile pelo
+% \vfill
+% \page
+% \component chap62 % Bawo! Xa ndilahlekayo
+% \vfill
+% \page
+% \component chap63 % Ke se ke utloile
+% \vfill
+% \page
+% \component chap64 % Tsela di matlapa
+% \vfill
+% \component chap65 % Ntate Nthekele Seana Marena
+% \vfill
+% \page
+% \component chap66 % Kajeno ke mokete
+% \vfill
+% \component chap67 % Fiela, fiela ngwanyana!
+% \vfill
+% \page
+% \component chap68 % Umakoti ngowethu!
+% \component chap65 % Ukuthula
+% \vfill
+% \page
+% \component chap66 % Ke Morena Jesu
+% \vfill
+% \page
+% \component chap67 % Vuma - Vuma
+% \vfill
+% \page
+% \component chap68 % Litany of the passion
+% \vfill
+% \page
+% \component chap69 %  I adore Thee
+% \vfill
+% \page
+% \component chap70 % The Mystery of Divine Humiliation
+% \vfill
+% \page
+% \component chap71 % Jehovah Modimo ke Nqosa Khauhelo
+% \vfill
+% \page
+% \component chap72 % Just as I am
+% \vfill
+% \page
+% \component chap73 % The day is past and over
+% \vfill
+% \page
+% \component chap74 % Be thou my soul's preserver
+% \component chap75 % All For Jesus
+% \component chap76 % Agnus Dei
+% \component chap77 % Agnus Dei
+% \component chap78 % Remember me, O mighty One!
+% \component chap79 % Jeso o re shwetse Calvary
+% \component chap80 % Ha yo mathatha
+% \component chap81 % Thapelo tsa rona
+% \component chap82 % Ruri le nkhapile pelo
+% \component chap83 % Ke se ke utloile
+% \component chap84 % Nna ke be-e-ya
+% \component chap85 % Xandinawe
+% \component chap86 % Konyana ya Molimo
+% \component chap87 % Tlo Moya o Halalelang
+% \component chap88 % Ndikhokhele Bawo
+% \component chap89 % Sefapanong 
+ \component chap90 % When The Roll Is Called Up Yonder
+
+\vfill
+%\blank[5*big]
+   \midaligned{------ THE END ------}
+
+\stoptext
+ 

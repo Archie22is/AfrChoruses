@@ -1,0 +1,124 @@
+\setupoutput[pdftex]
+\setupbodyfont[10.5pt]
+\setuppapersize[A5][A5]
+\setuplayout[topspace=1.5cm,
+             header=0.1cm,
+             footer=.5cm,
+             height=fit,
+             dx=1.45mm]
+\language[en]
+\setupheads
+  [alternative=inmargin]
+\setupinterlinespace[line=1.3\bodyfontsize]
+\setupwhitespace[medium]
+% \setuphead[chapter][letter={\switchtobodyfont[14pt,ss]\bf},
+%   numberstyle=bold,
+%  page=no,
+%   before={\blank[1*big]\setupheader[state=low]},
+%   after={\blank[1*big]\setupheader[state=high]}]
+\setuphead[chapter][style=\tfa \bf,
+  numberstyle=bold,
+ page=no,
+  before={\blank[1*big]},
+  after={\blank[1*medium]}]
+%\setuphead[section][letter={\switchtobodyfont[12pt,ss]\bf}]
+\setuplines[before={\startnarrower[1*left] \it},
+            after={\stopnarrower}]
+
+%\definesorting[chapter][content]
+%\setupsorting[chapter][criterium=all]
+
+\starttext
+
+\startstandardmakeup
+\blank[2*big]
+\setupframed[offset=.5em,frame=off]
+\tbox{\framed[width=\hsize,align=left,rightframe=on]{
+
+\blank[medium]
+{\switchtobodyfont[12pt,ss] \bfd \hfill A South-African Chorus
+\blank[big]
+Book}}} 
+\blank[3*big]
+\setupframed[offset=.5em,frame=off]
+\tbox{\framed[width=\hsize,align=left]{
+{\ss \tfb \hfill St Michael's Church,}}}
+\tbox{\framed[width=\hsize,align=left]{
+{\ss \tfb \hfill Bryanston.}
+}}\vfill
+
+
+\stopstandardmakeup
+
+\startfrontmatter
+\setuppagenumbering[location={footer,margin},
+ conversion=romannumerals,left={\hfil},right={\hfil},
+ alternative=doublesided]
+\setuppagenumber[number=1]
+\setupheader[state=low]
+
+ %    _________________________________________________________________
+
+\framed
+   [frame=off, width=broad, height=\textheight, bottom=, top=\vss]
+ {\rbox {
+\switchtobodyfont[small]
+\blank[19*big]
+
+\starttabulate[|1|p|]
+\NC          Title  \NC: A South--African Chorus Book \NC \NR
+\NC     Creator(s)  \NC: Various Sources \NC \NR
+\NC         Rights  \NC: ???Public Domain??? \NC \NR
+\NC      Publisher  \NC: St Michaels Church \NC \NR
+\NC                 \NC~ http://www.stmichaelschurch.co.za \NC \NR
+\NC                 \NC~  info@stmichaelschurch.co.za \NC \NR
+\NC Date publication\NC: 2011-08-13\NC \NR
+\NC         Editors \NC: Chris Mamabolo\NC \NR
+\NC         Layout  \NC: Jan de Kruyf\NC \NR
+\stoptabulate
+
+   African Religious Music.
+\blank[2*big]
+
+}}
+  %   _________________________________________________________________
+
+
+\page[left]
+\startlines
+To father Jimmy McConnell, of St Michael's, 
+with a gratitude greater than the world.
+\stoplines
+\page[right]
+
+\completecontent
+
+\stopfrontmatter
+
+\startbodymatter
+\setuplines[before={},
+            after={}]
+\setuppagenumbering[location={footer,margin},
+  conversion=numbers,left={\hfil},right={\hfil},
+  alternative=doublesided]
+\defineparagraphs[tocol][n=2]
+\setupparagraphs[tocol][1][width=7cm]
+\setupparagraphs[tocol][2][style=smallslanted]
+\page[right]
+\setuppagenumber[number=1]
+
+\component sorted
+%,('chap964', 19),('chap965', 13),('chap966', 12),('chap967', 11),('chap968', 24)] # the wedding songs
+\component chap968
+\vfill
+\component chap965
+\vfill
+\page
+\component chap964
+\vfill
+\component chap966
+\vfill
+\page
+\component chap967
+\vfill
+\stoptext

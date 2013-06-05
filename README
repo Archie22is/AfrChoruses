@@ -1,0 +1,17 @@
+A South-African Chorus Book.
+
+these are the source files for this book.
+
+they must be processed with ConTeXt to produce a pdf.
+
+'sorter.py' will try to produce a list of source files in an order that
+maximizes the page filling.
+
+the space required for each chorus must be entered in the table inside 
+the sorter.py.
+
+=====================================================================
+PLEASE do not mess with this repository, but mail any improvements to 
+
+jan.de.kruyf@gmail.com 
+=====================================================================
